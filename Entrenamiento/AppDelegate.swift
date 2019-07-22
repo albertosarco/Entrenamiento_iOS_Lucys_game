@@ -28,13 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = R.color.textColorPrimary
         //To change Navigation Bar Title Color
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: R.color.textColorPrimary]
-//        if (Bundle.main.identifier?.elementsEqual("com.smartbuilders.smartsales.ecommerce.ios.beval") ?? false) {
-//            // Status bar black font
-//            UINavigationBar.appearance().barStyle = UIBarStyle.default
-//        } else  {
-            // Status bar white font
-            UINavigationBar.appearance().barStyle = UIBarStyle.black
-//        }
+        // Status bar white font
+        UINavigationBar.appearance().barStyle = UIBarStyle.black
         // To Get transparent navigationBar
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
         // To remove black hairline under the Navigationbar
