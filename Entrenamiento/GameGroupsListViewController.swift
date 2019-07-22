@@ -12,12 +12,10 @@ import UIKit
 class GameGroupsListViewController: UIViewController {
     
     @IBOutlet weak var optionsListTableView: GameGroupsListTableView!
-    @IBOutlet weak var gamesTabBarItem: UITabBarItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.gamesTabBarItem.title = "Juegos"
-        
+                
         DispatchQueue.global(qos: .background).async(execute: {
             let gameGroupsList = GameData.getGameGroupsList()
             

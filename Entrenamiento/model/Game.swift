@@ -7,9 +7,17 @@
 //
 
 public struct Game {
-    var id: Int
+    var id: Int!
     var name: String!
     var stagesList: [GameStage]!
     var videoId: String!
     var videoThumbnailUrl: String!
+    
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case stagesList
+        case videoId
+        case videoThumbnailUrl
+    }
 }

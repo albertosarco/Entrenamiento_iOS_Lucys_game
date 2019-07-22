@@ -6,11 +6,17 @@
 //  Copyright © 2019 Smart Builders C.A. All rights reserved.
 //
 
-import UIKit
-
 struct OptionCard : Equatable {
-    var name: String
-    var imageIcon: UIImage
-    var soundName: String
-    var isCorrectOption: Bool
+    
+    var name: String!
+    var imageName: String!
+    var soundName: String!
+    var isCorrectOption: Bool!
+    
+    private enum CodingKeys: String, CodingKey {
+        case name
+        case imageName
+        case soundName
+        case isCorrectOption
+    }
 }

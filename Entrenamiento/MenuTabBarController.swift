@@ -14,5 +14,8 @@ class MenuTabBarController: UITabBarController {
         super.viewDidLoad()
         self.navigationItem.title = "Juegos de Lucy"
         self.removeBackButtonText()
+        
+        self.tabBar.items?[0].title = "Juegos"
+        self.tabBar.items?[1].title = "Vídeos"
     }
 }

@@ -44,10 +44,10 @@ class GameViewController: UIViewController {
                     let index = self.mDataSet.count - 1
                     
                     self.mDataSet[index].append([])
-                    self.mDataSet[index][0].append(gameStage.referenceCard)
+                    self.mDataSet[index][0].append(gameStage.referenceCard!)
                     
                     self.mDataSet[index].append([])
-                    for gameOption in gameStage.optionCards {
+                    for gameOption in gameStage.optionCards! {
                         self.mDataSet[index][1].append(gameOption)
                     }
                     

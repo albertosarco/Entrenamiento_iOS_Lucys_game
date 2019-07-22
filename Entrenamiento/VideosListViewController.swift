@@ -12,11 +12,9 @@ import UIKit
 class VideosListViewController: UIViewController {
     
     @IBOutlet weak var videosListCollectionView: VideosListCollectionView!
-    @IBOutlet weak var videosTabBarItem: UITabBarItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.videosTabBarItem.title = "Vídeos"
         
         DispatchQueue.global(qos: .background).async(execute: {
             let gamesList = GameData.getAllGames()

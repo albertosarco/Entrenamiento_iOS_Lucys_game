@@ -42,7 +42,7 @@ class GameGroupsListTableView: UITableView, UITableViewDataSource, UITableViewDe
             as! GameGroupsListItemTableViewCell
         
         cell.name.text = mDataSet[indexPath.row].name
-        Utils.loadImageByFileURL(Utils.getString(R.string.youtube_thumbnail_hq_url, mDataSet[indexPath.row].imageName ?? ""), cell.imageIcon)
+        Utils.loadImageByFileURL(Utils.getString(R.string.image_url, mDataSet[indexPath.row].imageName ?? ""), cell.imageIcon)
         
         return cell
     }

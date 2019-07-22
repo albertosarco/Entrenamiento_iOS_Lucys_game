@@ -6,10 +6,15 @@
 //  Copyright © 2019 Smart Builders C.A. All rights reserved.
 //
 
-import UIKit
-
 struct ReferenceCard : Equatable {
-    var name: String
-    var imageIcon: UIImage
-    var soundName: String
+    
+    var name: String?
+    var imageName: String?
+    var soundName: String?
+    
+    private enum CodingKeys: String, CodingKey {
+        case name
+        case imageName
+        case soundName
+    }
 }

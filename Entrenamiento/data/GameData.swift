@@ -12,7 +12,7 @@ public class GameData {
     
     public static func getGameGroupsList() -> [GameGroup]! {
         do {
-            let data = try consume("getGameGroupsPost", nil, "POST", "application/json;charset=UTF-8")
+            let data = try consume("getGameGroupsList", nil)
             return try JSONDecoder().decode([GameGroup].self, from: data)
         } catch let error {
             print(error)
@@ -37,36 +37,36 @@ public class GameData {
     
     public static func getGameStagesListById(_ gameId: Int) -> [GameStage]! {
         let stagesList: [GameStage] = [
-            GameStage(referenceCard: ReferenceCard(name: "Vocal A", imageIcon: #imageLiteral(resourceName: "reference_a"), soundName: "letra_A"),
-                      optionCards: [OptionCard(name: "A - a", imageIcon: #imageLiteral(resourceName: "reference_a"), soundName: "incorrecto_A", isCorrectOption: true),
-                                    OptionCard(name: "E - e", imageIcon: #imageLiteral(resourceName: "reference_e"), soundName: "incorrecto_E", isCorrectOption: false),
-                                    OptionCard(name: "I - i", imageIcon: #imageLiteral(resourceName: "reference_i"), soundName: "incorrecto_I", isCorrectOption: false),
-                                    OptionCard(name: "O - o", imageIcon: #imageLiteral(resourceName: "reference_o"), soundName: "incorrecto_O", isCorrectOption: false),
-                                    OptionCard(name: "U - u", imageIcon: #imageLiteral(resourceName: "reference_u"), soundName: "incorrecto_U", isCorrectOption: false)]),
-            GameStage(referenceCard: ReferenceCard(name: "Vocal E", imageIcon: #imageLiteral(resourceName: "reference_e"), soundName: "letra_E"),
-                      optionCards: [OptionCard(name: "A - a", imageIcon: #imageLiteral(resourceName: "reference_a"), soundName: "incorrecto_A", isCorrectOption: false),
-                                    OptionCard(name: "E - e", imageIcon: #imageLiteral(resourceName: "reference_e"), soundName: "incorrecto_E", isCorrectOption: true),
-                                    OptionCard(name: "I - i", imageIcon: #imageLiteral(resourceName: "reference_i"), soundName: "incorrecto_I", isCorrectOption: false),
-                                    OptionCard(name: "O - o", imageIcon: #imageLiteral(resourceName: "reference_o"), soundName: "incorrecto_O", isCorrectOption: false),
-                                    OptionCard(name: "U - u", imageIcon: #imageLiteral(resourceName: "reference_u"), soundName: "incorrecto_U", isCorrectOption: false)]),
-            GameStage(referenceCard: ReferenceCard(name: "Vocal I", imageIcon: #imageLiteral(resourceName: "reference_i"), soundName: "letra_I"),
-                      optionCards: [OptionCard(name: "A - a", imageIcon: #imageLiteral(resourceName: "reference_a"), soundName: "incorrecto_A", isCorrectOption: false),
-                                    OptionCard(name: "E - e", imageIcon: #imageLiteral(resourceName: "reference_e"), soundName: "incorrecto_E", isCorrectOption: false),
-                                    OptionCard(name: "I - i", imageIcon: #imageLiteral(resourceName: "reference_i"), soundName: "incorrecto_I", isCorrectOption: true),
-                                    OptionCard(name: "O - o", imageIcon: #imageLiteral(resourceName: "reference_o"), soundName: "incorrecto_O", isCorrectOption: false),
-                                    OptionCard(name: "U - u", imageIcon: #imageLiteral(resourceName: "reference_u"), soundName: "incorrecto_U", isCorrectOption: false)]),
-            GameStage(referenceCard: ReferenceCard(name: "Vocal O", imageIcon: #imageLiteral(resourceName: "reference_o"), soundName: "letra_O"),
-                      optionCards: [OptionCard(name: "A - a", imageIcon: #imageLiteral(resourceName: "reference_a"), soundName: "incorrecto_A", isCorrectOption: false),
-                                    OptionCard(name: "E - e", imageIcon: #imageLiteral(resourceName: "reference_e"), soundName: "incorrecto_E", isCorrectOption: false),
-                                    OptionCard(name: "I - i", imageIcon: #imageLiteral(resourceName: "reference_i"), soundName: "incorrecto_I", isCorrectOption: false),
-                                    OptionCard(name: "O - o", imageIcon: #imageLiteral(resourceName: "reference_o"), soundName: "incorrecto_O", isCorrectOption: true),
-                                    OptionCard(name: "U - u", imageIcon: #imageLiteral(resourceName: "reference_u"), soundName: "incorrecto_U", isCorrectOption: false)]),
-            GameStage(referenceCard: ReferenceCard(name: "Vocal U", imageIcon: #imageLiteral(resourceName: "reference_u"), soundName: "letra_U"),
-                      optionCards: [OptionCard(name: "A - a", imageIcon: #imageLiteral(resourceName: "reference_a"), soundName: "incorrecto_A", isCorrectOption: false),
-                                    OptionCard(name: "E - e", imageIcon: #imageLiteral(resourceName: "reference_e"), soundName: "incorrecto_E", isCorrectOption: false),
-                                    OptionCard(name: "I - i", imageIcon: #imageLiteral(resourceName: "reference_i"), soundName: "incorrecto_I", isCorrectOption: false),
-                                    OptionCard(name: "O - o", imageIcon: #imageLiteral(resourceName: "reference_o"), soundName: "incorrecto_O", isCorrectOption: false),
-                                    OptionCard(name: "U - u", imageIcon: #imageLiteral(resourceName: "reference_u"), soundName: "incorrecto_U", isCorrectOption: true)])]
+            GameStage(referenceCard: ReferenceCard(name: "Vocal A", imageName: "reference_a.jpg", soundName: "letra_A"),
+                      optionCards: [OptionCard(name: "A - a", imageName: "reference_a.jpg", soundName: "incorrecto_A", isCorrectOption: true),
+                                    OptionCard(name: "E - e", imageName: "reference_e.jpg", soundName: "incorrecto_E", isCorrectOption: false),
+                                    OptionCard(name: "I - i", imageName: "reference_i.jpg", soundName: "incorrecto_I", isCorrectOption: false),
+                                    OptionCard(name: "O - o", imageName: "reference_o.jpg", soundName: "incorrecto_O", isCorrectOption: false),
+                                    OptionCard(name: "U - u", imageName: "reference_u.jpg", soundName: "incorrecto_U", isCorrectOption: false)]),
+            GameStage(referenceCard: ReferenceCard(name: "Vocal E", imageName: "reference_e.jpg", soundName: "letra_E"),
+                      optionCards: [OptionCard(name: "A - a", imageName: "reference_a.jpg", soundName: "incorrecto_A", isCorrectOption: false),
+                                    OptionCard(name: "E - e", imageName: "reference_e.jpg", soundName: "incorrecto_E", isCorrectOption: true),
+                                    OptionCard(name: "I - i", imageName: "reference_i.jpg", soundName: "incorrecto_I", isCorrectOption: false),
+                                    OptionCard(name: "O - o", imageName: "reference_o.jpg", soundName: "incorrecto_O", isCorrectOption: false),
+                                    OptionCard(name: "U - u", imageName: "reference_u.jpg", soundName: "incorrecto_U", isCorrectOption: false)]),
+            GameStage(referenceCard: ReferenceCard(name: "Vocal I", imageName: "reference_a.jpg", soundName: "letra_I"),
+                      optionCards: [OptionCard(name: "A - a", imageName: "reference_a.jpg", soundName: "incorrecto_A", isCorrectOption: false),
+                                    OptionCard(name: "E - e", imageName: "reference_a.jpg", soundName: "incorrecto_E", isCorrectOption: false),
+                                    OptionCard(name: "I - i", imageName: "reference_a.jpg", soundName: "incorrecto_I", isCorrectOption: true),
+                                    OptionCard(name: "O - o", imageName: "reference_a.jpg", soundName: "incorrecto_O", isCorrectOption: false),
+                                    OptionCard(name: "U - u", imageName: "reference_a.jpg", soundName: "incorrecto_U", isCorrectOption: false)]),
+            GameStage(referenceCard: ReferenceCard(name: "Vocal O", imageName: "reference_o.jpg", soundName: "letra_O"),
+                      optionCards: [OptionCard(name: "A - a", imageName: "reference_a.jpg", soundName: "incorrecto_A", isCorrectOption: false),
+                                    OptionCard(name: "E - e", imageName: "reference_a.jpg", soundName: "incorrecto_E", isCorrectOption: false),
+                                    OptionCard(name: "I - i", imageName: "reference_a.jpg", soundName: "incorrecto_I", isCorrectOption: false),
+                                    OptionCard(name: "O - o", imageName: "reference_a.jpg", soundName: "incorrecto_O", isCorrectOption: true),
+                                    OptionCard(name: "U - u", imageName: "reference_a.jpg", soundName: "incorrecto_U", isCorrectOption: false)]),
+            GameStage(referenceCard: ReferenceCard(name: "Vocal U", imageName: "reference_u.jpg", soundName: "letra_U"),
+                      optionCards: [OptionCard(name: "A - a", imageName: "reference_a.jpg", soundName: "incorrecto_A", isCorrectOption: false),
+                                    OptionCard(name: "E - e", imageName: "reference_a.jpg", soundName: "incorrecto_E", isCorrectOption: false),
+                                    OptionCard(name: "I - i", imageName: "reference_a.jpg", soundName: "incorrecto_I", isCorrectOption: false),
+                                    OptionCard(name: "O - o", imageName: "reference_a.jpg", soundName: "incorrecto_O", isCorrectOption: false),
+                                    OptionCard(name: "U - u", imageName: "reference_a.jpg", soundName: "incorrecto_U", isCorrectOption: true)])]
         return stagesList
     }
     
@@ -80,14 +80,14 @@ public class GameData {
         return gamesList
     }
     
-    private static func consume(_ urlString: String, _ httpBody: String!, _ httpMethod: String, _ contentType: String) throws -> Data {
+    private static func consume(_ urlString: String, _ httpBody: String!) throws -> Data {
         let connectionTimeOutInSeconds: Double = 60
         
         var request = URLRequest(url: URL(string: Utils.getString(R.string.server_url, urlString))!)
         request.timeoutInterval = connectionTimeOutInSeconds
         request.cachePolicy = URLRequest.CachePolicy.reloadIgnoringLocalAndRemoteCacheData
-        request.httpMethod = httpMethod
-        request.setValue(contentType, forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+        request.setValue("application/json;charset=UTF-8", forHTTPHeaderField: "Content-Type")
 
         if (httpBody != nil) {
             request.httpBody = httpBody.data(using: .utf8)
@@ -112,32 +112,4 @@ public class GameData {
     }
 }
 
-extension URLSession {
-    
-    func synchronousDataTask(with request: URLRequest) throws -> (data: Data?, response: HTTPURLResponse?) {
-        
-        let semaphore = DispatchSemaphore(value: 0)
-        
-        var responseData: Data?
-        var theResponse: URLResponse?
-        var theError: Error?
-        
-        dataTask(with: request) { (data, response, error) -> Void in
-            
-            responseData = data
-            theResponse = response
-            theError = error
-            
-            semaphore.signal()
-            
-            }.resume()
-        
-        _ = semaphore.wait(timeout: .distantFuture)
-        
-        if let error = theError {
-            throw error
-        }
-        
-        return (data: responseData, response: theResponse as! HTTPURLResponse?)
-    }
-}
+

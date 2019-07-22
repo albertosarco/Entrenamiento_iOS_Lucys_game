@@ -59,7 +59,6 @@
                     <connections>
                         <outlet property="tabBarItem" destination="P47-cd-NVS" id="xug-1H-sZq"/>
                         <outlet property="videosListCollectionView" destination="q86-Og-8tM" id="RtG-QG-tYo"/>
-                        <outlet property="videosTabBarItem" destination="P47-cd-NVS" id="Dph-rb-b9L"/>
                         <segue destination="eE7-Rg-JhL" kind="show" identifier="SegueGameVC" id="c5J-nC-GWn"/>
                     </connections>
                 </viewController>
@@ -91,7 +90,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Title Games" image="baseline_videogame_asset_black_18pt" id="DPL-Sq-vjL"/>
                     <connections>
-                        <outlet property="gamesTabBarItem" destination="DPL-Sq-vjL" id="9CW-hD-62s"/>
                         <outlet property="optionsListTableView" destination="r3C-Py-aRz" id="Fio-6f-6cF"/>
                         <outlet property="tabBarItem" destination="DPL-Sq-vjL" id="A9M-iD-eP7"/>
                         <segue destination="vPn-ma-sq1" kind="show" identifier="SegueGamesListVC" id="5o6-OD-wSa"/>
@@ -112,6 +110,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <outlet property="tabBar" destination="BGj-wL-mOS" id="nIh-Kt-d86"/>
                         <segue destination="Eio-hr-6yx" kind="relationship" relationship="viewControllers" id="DqY-J3-RLY"/>
                         <segue destination="k7m-lt-V9q" kind="relationship" relationship="viewControllers" id="8BV-hI-Ek0"/>
                     </connections>

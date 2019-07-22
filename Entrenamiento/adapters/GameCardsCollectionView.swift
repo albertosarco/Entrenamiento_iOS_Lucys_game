@@ -57,7 +57,7 @@ class GameCardsCollectionView: UICollectionView, UICollectionViewDataSource, UIC
                 as! ReferenceCardItemCollectionViewCell
             
             cell.text.text = gameReference.name
-            cell.image.image = gameReference.imageIcon
+            Utils.loadImageByFileURL(Utils.getString(R.string.image_url, gameReference.imageName ?? ""), cell.image)
             
             return cell
         } else if let gameOption: OptionCard = mDataSet[indexPath.section][indexPath.row] as? OptionCard {
@@ -65,7 +65,7 @@ class GameCardsCollectionView: UICollectionView, UICollectionViewDataSource, UIC
             as! OptionCardItemCollectionViewCell
         
             cell.text.text = gameOption.name
-            cell.image.image = gameOption.imageIcon
+            Utils.loadImageByFileURL(Utils.getString(R.string.image_url, gameOption.imageName), cell.image)
         
             return cell
         }
@@ -90,7 +90,7 @@ class GameCardsCollectionView: UICollectionView, UICollectionViewDataSource, UIC
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vocal = mDataSet[indexPath.section][indexPath.row] as? ReferenceCard {
-            playSound(vocal.soundName)
+            playSound(vocal.soundName ?? "")
         } else if let option = mDataSet[indexPath.section][indexPath.row] as? OptionCard {
             if (option.isCorrectOption) {
                 playSound("winner")

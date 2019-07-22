@@ -7,6 +7,12 @@
 //
 
 public struct GameStage {
-    var referenceCard: ReferenceCard
-    var optionCards: [OptionCard]
+    
+    var referenceCard: ReferenceCard!
+    var optionCards: [OptionCard]!
+    
+    private enum CodingKeys: String, CodingKey {
+        case referenceCard
+        case optionCards
+    }
 }
