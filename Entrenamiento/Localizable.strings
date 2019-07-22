@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Entrenamiento
+
+  Created by Jesus Alberto Sarco Giannini on 21/07/2019.
+  Copyright © 2019 Smart Builders C.A. All rights reserved.
+*/
+
+"youtube_thumbnail_hq_url" = "http://img.youtube.com/vi/%@/hqdefault.jpg";
+"server_url" = "http://192.168.1.133:8080/EntrenamientoWS/%@";
+"image_url" = "http://192.168.1.133:8080/EntrenamientoWS/getImage?name=%@";
