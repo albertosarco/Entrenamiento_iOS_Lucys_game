@@ -17,6 +17,6 @@ struct OptionCard: Codable  {
         case name
         case imageName
         case soundName
-        case isCorrectOption
+        case isCorrectOption = "correctOption"
     }
 }

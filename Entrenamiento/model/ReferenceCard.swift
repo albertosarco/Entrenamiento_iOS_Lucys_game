@@ -8,9 +8,9 @@
 
 struct ReferenceCard: Codable {
     
-    var name: String?
-    var imageName: String?
-    var soundName: String?
+    var name: String!
+    var imageName: String!
+    var soundName: String!
     
     private enum CodingKeys: String, CodingKey {
         case name

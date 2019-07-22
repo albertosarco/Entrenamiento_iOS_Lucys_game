@@ -22,16 +22,16 @@ public class Utils {
                       locale: Locale.current, arguments: args)
     }
     
-    public static func loadImageByFileURL(_ fileUrl: String!, _ imageView: UIImageView) {
-        if (!TextUtils.isEmpty(fileUrl)) {
-            if let imageFromFile = getFileInDirByFileName(fileUrl) {
+    public static func loadImageByFileURL(_ fileName: String!, _ fileUrl: String!, _ imageView: UIImageView) {
+        if (!TextUtils.isEmpty(fileName) && !TextUtils.isEmpty(fileUrl)) {
+            if let imageFromFile = getFileInDirByFileName(fileName) {
                 imageView.accessibilityIdentifier = nil
                 imageView.accessibilityValue = nil
                 imageView.image = imageFromFile
                 //si consigue cargar la imagen entonces no continua con el codigo
                 return
             }
-
+            
             imageView.accessibilityIdentifier = nil
             imageView.accessibilityValue = nil
             imageView.image = getLoadingImageUIImage()
@@ -44,7 +44,7 @@ public class Utils {
                 return
             }
             
-            imageView.accessibilityIdentifier = fileUrl
+            imageView.accessibilityIdentifier = fileName
             imageView.accessibilityValue = url.absoluteString
             
             let sessionConfig = URLSessionConfiguration.default
@@ -81,13 +81,13 @@ public class Utils {
                         return
                 }
                 
-                if let fileUrl = imageView.accessibilityIdentifier,
+                if let fileName = imageView.accessibilityIdentifier,
                     imageView.accessibilityValue == url.absoluteString {
                     self.imagesNotDownloaded.remove(imageView)
                     DispatchQueue.main.async() {
                         imageView.image = imageFromServlet
                     }
-                    createFileInDir(fileUrl, imageFromServlet)
+                    createFileInDir(fileName, imageFromServlet)
                 }
                 }.resume()
         } else {
@@ -112,11 +112,11 @@ public class Utils {
         return #imageLiteral(resourceName: "no_image_available")
     }
     
-    fileprivate static func reloadImagesNotDownloaded() {
+    public static func reloadImagesNotDownloaded() {
         for imageNotDownloaded in imagesNotDownloaded {
             if let imageView = imageNotDownloaded as? UIImageView {
                 DispatchQueue.main.async() {
-                    loadImageByFileURL(imageView.accessibilityIdentifier, imageView)
+                    loadImageByFileURL(imageView.accessibilityIdentifier, imageView.accessibilityValue, imageView)
                 }
             }
         }
@@ -189,6 +189,21 @@ public class Utils {
             }
         }
         return data!
+    }
+    
+    static func deleteImagesFolder() -> Bool {
+        return clearTempFolder(getImagesFolderPath())
+    }
+    
+    static func clearTempFolder(_ url: URL!) -> Bool {
+        let fileManager = FileManager.default
+        do {
+            try fileManager.removeItem(atPath: url.path)
+            return true
+        } catch let error as NSError {
+            print("Ooops! Something went wrong: \(error)")
+        }
+        return false
     }
 }
 

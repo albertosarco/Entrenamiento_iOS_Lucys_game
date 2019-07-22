@@ -7,5 +7,13 @@
 */
 
 "youtube_thumbnail_hq_url" = "http://img.youtube.com/vi/%@/hqdefault.jpg";
-"server_url" = "http://192.168.1.133:8080/EntrenamientoWS/%@";
-"image_url" = "http://192.168.1.133:8080/EntrenamientoWS/GetImage?fileName=%@";
+"server_url" = "http://sb-sc-shneo.smartbuilders-ve.com:8089/EntrenamientoWS/%@";
+"image_url" = "http://sb-sc-shneo.smartbuilders-ve.com:8089/EntrenamientoWS/GetImage?fileName=%@";
+"sound_url" = "http://sb-sc-shneo.smartbuilders-ve.com:8089/EntrenamientoWS/GetSound?fileName=%@";
+"wait_please" = "Cargando... espere por favor";
+"deleting_images_wait_please" = "Eliminando imágenes, espere por favor";
+"folder_removed_successfully" = "Fichero eliminado exitosamente";
+"folder_was_not_removed" = "El fichero no pudo ser eliminado";
+"clean_images_dir" = "¿Desea eliminar las imágenes almacenadas en el dispositivo?";
+"yes" = "Si";
+"no" = "No";

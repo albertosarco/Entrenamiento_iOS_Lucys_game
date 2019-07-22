@@ -42,7 +42,8 @@ class GameGroupsListTableView: UITableView, UITableViewDataSource, UITableViewDe
             as! GameGroupsListItemTableViewCell
         
         cell.name.text = mDataSet[indexPath.row].name
-        Utils.loadImageByFileURL(Utils.getString(R.string.image_url, mDataSet[indexPath.row].imageName ?? ""), cell.imageIcon)
+        Utils.loadImageByFileURL(mDataSet[indexPath.row].imageName,
+                                 Utils.getString(R.string.image_url, mDataSet[indexPath.row].imageName ?? ""), cell.imageIcon)
         
         return cell
     }
@@ -56,6 +57,13 @@ class GameGroupsListTableView: UITableView, UITableViewDataSource, UITableViewDe
     
     func getItemCount() -> Int {
         return mDataSet.count
+    }
+    
+    func setData(_ data: [GameGroup]!){
+        mDataSet.removeAll()
+        if (data != nil && !data.isEmpty) {
+            mDataSet += data
+        }
     }
 }
 

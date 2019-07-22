@@ -15,6 +15,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var gameCardsCollectionView: GameCardsCollectionView!
     
     public var mGameId: Int!
+    fileprivate var mWaitPlease: DialogWaitPleaseVC!
     fileprivate var mGame: Game?
     fileprivate var mDataSet: [[[Any]]] = [[[]]]
     
@@ -23,15 +24,20 @@ class GameViewController: UIViewController {
         self.navigationItem.title = "Cargando juego..."
         self.removeBackButtonText()
         
+//        if (mWaitPlease == nil) {
+//            mWaitPlease = DialogWaitPleaseVC.show(self, Utils.getString(R.string.wait_please))
+//        }
+        
         DispatchQueue.global(qos: .background).async(execute: {
             self.loadData()
-            let dataSet = self.getData(0)
             
             DispatchQueue.main.sync {
                 self.navigationItem.title = self.mGame?.name
                 
-                self.gameCardsCollectionView.new(self, dataSet, 0)
+                self.gameCardsCollectionView.new(self, self.mDataSet.count > 0 ? self.mDataSet[0] : nil, 0)
                 self.gameCardsCollectionView.reloadData()
+                
+                self.showOrHideEmptyLayout()
             }
         })
     }
@@ -61,11 +67,17 @@ class GameViewController: UIViewController {
     
     func updateData(_ index: Int) {
         if (index < self.mDataSet.count) {
+//            if (mWaitPlease == nil) {
+//                mWaitPlease = DialogWaitPleaseVC.show(self, Utils.getString(R.string.wait_please))
+//            }
+            
             DispatchQueue.global(qos: .background).async(execute: {
-                self.gameCardsCollectionView.setData(self.getData(index), index)
+                self.gameCardsCollectionView.setData(self.mDataSet[index], index)
 
                 DispatchQueue.main.sync {
                     self.gameCardsCollectionView.reloadData()
+                    
+                    self.showOrHideEmptyLayout()
                 }
             })
         } else {
@@ -73,7 +85,17 @@ class GameViewController: UIViewController {
         }
     }
     
-    fileprivate func getData(_ index: Int) -> [[Any]] {
-        return mDataSet[index]
+    fileprivate func showOrHideEmptyLayout() {
+        if (gameCardsCollectionView.getItemCount() > 0) {
+            gameCardsCollectionView.removeEmptyMessage()
+        } else {
+            gameCardsCollectionView.setEmptyMessage(Utils.getString(R.string.empty_screen))
+        }
+        
+        if (self.mWaitPlease != nil) {
+            self.mWaitPlease.dismiss(animated: true, completion: {
+                self.mWaitPlease = nil
+            })
+        }
     }
 }

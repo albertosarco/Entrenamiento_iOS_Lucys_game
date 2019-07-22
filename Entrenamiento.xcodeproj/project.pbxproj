@@ -16,6 +16,12 @@
 		85216ADF22E25AFD0018DB5A /* GameGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85216ADE22E25AFD0018DB5A /* GameGroup.swift */; };
 		85216AE422E266330018DB5A /* GameGroupsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85216AE322E266330018DB5A /* GameGroupsListViewController.swift */; };
 		85216AE622E277AD0018DB5A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85216AE522E277AD0018DB5A /* GameViewController.swift */; };
+		853CAB5522E65A2A004CBB48 /* winner.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 853CAB5422E65A2A004CBB48 /* winner.mp3 */; };
+		853CAB5722E6677B004CBB48 /* DialogWaitPleaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CAB5622E6677B004CBB48 /* DialogWaitPleaseVC.swift */; };
+		853CAB5B22E667BB004CBB48 /* DialogWaitPlease.xib in Resources */ = {isa = PBXBuildFile; fileRef = 853CAB5A22E667BB004CBB48 /* DialogWaitPlease.xib */; };
+		853CAB5D22E670EF004CBB48 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CAB5C22E670EF004CBB48 /* Toast.swift */; };
+		853CAB5F22E6733A004CBB48 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CAB5E22E6733A004CBB48 /* Reachability.swift */; };
+		853CAB6222E67389004CBB48 /* ConnectivityChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CAB6122E67389004CBB48 /* ConnectivityChange.swift */; };
 		853D9B2822E47DA8009135FF /* VideosListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D9B2722E47DA8009135FF /* VideosListCollectionView.swift */; };
 		853D9B2A22E47F88009135FF /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D9B2922E47F88009135FF /* Game.swift */; };
 		853D9B2D22E48299009135FF /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D9B2C22E48299009135FF /* GameData.swift */; };
@@ -57,6 +63,12 @@
 		85216ADE22E25AFD0018DB5A /* GameGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGroup.swift; sourceTree = "<group>"; };
 		85216AE322E266330018DB5A /* GameGroupsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGroupsListViewController.swift; sourceTree = "<group>"; };
 		85216AE522E277AD0018DB5A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		853CAB5422E65A2A004CBB48 /* winner.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winner.mp3; sourceTree = "<group>"; };
+		853CAB5622E6677B004CBB48 /* DialogWaitPleaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogWaitPleaseVC.swift; sourceTree = "<group>"; };
+		853CAB5A22E667BB004CBB48 /* DialogWaitPlease.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DialogWaitPlease.xib; sourceTree = "<group>"; };
+		853CAB5C22E670EF004CBB48 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		853CAB5E22E6733A004CBB48 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		853CAB6122E67389004CBB48 /* ConnectivityChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityChange.swift; sourceTree = "<group>"; };
 		853D9B2722E47DA8009135FF /* VideosListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosListCollectionView.swift; sourceTree = "<group>"; };
 		853D9B2922E47F88009135FF /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		853D9B2C22E48299009135FF /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
@@ -131,20 +143,23 @@
 				85216AC222E249870018DB5A /* AppDelegate.swift */,
 				85216AC922E2498A0018DB5A /* Assets.xcassets */,
 				85216ACE22E2498A0018DB5A /* Info.plist */,
+				853CAB5422E65A2A004CBB48 /* winner.mp3 */,
 				85216ADA22E25A640018DB5A /* adapters */,
 				853D9B2B22E48283009135FF /* data */,
 				85216ADD22E25AE30018DB5A /* model */,
+				853CAB6022E67370004CBB48 /* receivers */,
 				8541528B22E3492400C35A5E /* util */,
 				85216AE022E25D2D0018DB5A /* views */,
 				85216ACB22E2498A0018DB5A /* LaunchScreen.storyboard */,
 				85216AC622E249870018DB5A /* Main.storyboard */,
-				8560FE8622E4BCAD00438448 /* MenuTabBarController.swift */,
 				854152C622E3B4C900C35A5E /* DialogCongratsViewController.swift */,
-				853D9B2E22E48373009135FF /* VideosListViewController.swift */,
+				853CAB5622E6677B004CBB48 /* DialogWaitPleaseVC.swift */,
 				85216AE322E266330018DB5A /* GameGroupsListViewController.swift */,
 				8560FE8422E4B56A00438448 /* GamesListViewController.swift */,
 				85216AE522E277AD0018DB5A /* GameViewController.swift */,
 				85216AC422E249870018DB5A /* MainViewController.swift */,
+				853D9B2E22E48373009135FF /* VideosListViewController.swift */,
+				8560FE8622E4BCAD00438448 /* MenuTabBarController.swift */,
 				853D9B3A22E4A98C009135FF /* Localizable.strings */,
 			);
 			path = Entrenamiento;
@@ -183,8 +198,17 @@
 				854152A222E362F000C35A5E /* OptionCardItem.xib */,
 				8541529822E3531B00C35A5E /* ReferenceCardItem.xib */,
 				853D9B3422E48C4D009135FF /* VideosListItem.xib */,
+				853CAB5A22E667BB004CBB48 /* DialogWaitPlease.xib */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		853CAB6022E67370004CBB48 /* receivers */ = {
+			isa = PBXGroup;
+			children = (
+				853CAB6122E67389004CBB48 /* ConnectivityChange.swift */,
+			);
+			path = receivers;
 			sourceTree = "<group>";
 		};
 		853D9B2B22E48283009135FF /* data */ = {
@@ -200,9 +224,11 @@
 			children = (
 				853D9B3022E48787009135FF /* Extensions.swift */,
 				8541529022E34A5C00C35A5E /* R.swift */,
+				853CAB5E22E6733A004CBB48 /* Reachability.swift */,
 				853D9B3222E48A49009135FF /* TextUtils.swift */,
-				8541528E22E349DA00C35A5E /* Utils.swift */,
+				853CAB5C22E670EF004CBB48 /* Toast.swift */,
 				8541528C22E3493300C35A5E /* UICollectionViewCellAutoSize.swift */,
+				8541528E22E349DA00C35A5E /* Utils.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -282,7 +308,9 @@
 				853D9B3922E4A759009135FF /* GameGroupsListItem.xib in Resources */,
 				85216ACD22E2498A0018DB5A /* LaunchScreen.storyboard in Resources */,
 				853D9B3B22E4A98C009135FF /* Localizable.strings in Resources */,
+				853CAB5522E65A2A004CBB48 /* winner.mp3 in Resources */,
 				8541529722E34FD600C35A5E /* EmptyLayout.xib in Resources */,
+				853CAB5B22E667BB004CBB48 /* DialogWaitPlease.xib in Resources */,
 				85216ACA22E2498A0018DB5A /* Assets.xcassets in Resources */,
 				854152A322E362F000C35A5E /* OptionCardItem.xib in Resources */,
 				85216AC822E249870018DB5A /* Main.storyboard in Resources */,
@@ -344,8 +372,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				85216AE422E266330018DB5A /* GameGroupsListViewController.swift in Sources */,
+				853CAB6222E67389004CBB48 /* ConnectivityChange.swift in Sources */,
 				8541529322E34D2B00C35A5E /* ReferenceCard.swift in Sources */,
 				8541529122E34A5D00C35A5E /* R.swift in Sources */,
+				853CAB5722E6677B004CBB48 /* DialogWaitPleaseVC.swift in Sources */,
 				8541528F22E349DA00C35A5E /* Utils.swift in Sources */,
 				853D9B2822E47DA8009135FF /* VideosListCollectionView.swift in Sources */,
 				8541529F22E35E8100C35A5E /* OptionCard.swift in Sources */,
@@ -354,6 +384,7 @@
 				853D9B2F22E48373009135FF /* VideosListViewController.swift in Sources */,
 				853D9B3122E48787009135FF /* Extensions.swift in Sources */,
 				853D9B3322E48A49009135FF /* TextUtils.swift in Sources */,
+				853CAB5F22E6733A004CBB48 /* Reachability.swift in Sources */,
 				853D9B3722E49719009135FF /* GameStage.swift in Sources */,
 				853D9B2D22E48299009135FF /* GameData.swift in Sources */,
 				85216ADC22E25AA90018DB5A /* GameGroupsListTableView.swift in Sources */,
@@ -364,6 +395,7 @@
 				8560FE8122E4B4AF00438448 /* GamesListCollectionView.swift in Sources */,
 				8541528A22E3483600C35A5E /* GameCardsCollectionView.swift in Sources */,
 				85216ADF22E25AFD0018DB5A /* GameGroup.swift in Sources */,
+				853CAB5D22E670EF004CBB48 /* Toast.swift in Sources */,
 				85216AC322E249870018DB5A /* AppDelegate.swift in Sources */,
 				853D9B2A22E47F88009135FF /* Game.swift in Sources */,
 			);

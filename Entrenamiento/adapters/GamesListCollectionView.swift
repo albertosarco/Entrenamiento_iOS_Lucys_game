@@ -43,7 +43,8 @@ class GamesListCollectionView: UICollectionView, UICollectionViewDataSource, UIC
             as! GamesListItemCVCell
         
         cell.name.text = mDataSet[indexPath.row].name
-        Utils.loadImageByFileURL(Utils.getString(R.string.youtube_thumbnail_hq_url, mDataSet[indexPath.row].videoId), cell.videoThumbImage)
+        Utils.loadImageByFileURL(mDataSet[indexPath.row].videoId,
+                                 Utils.getString(R.string.youtube_thumbnail_hq_url, mDataSet[indexPath.row].videoId), cell.videoThumbImage)
         
         return cell
     }
@@ -60,7 +61,11 @@ class GamesListCollectionView: UICollectionView, UICollectionViewDataSource, UIC
                                sender: mDataSet[indexPath.row])
     }
     
-    func setData(_ data: [Game]!, _ index: Int){
+    func getItemCount() -> Int {
+        return mDataSet.count
+    }
+    
+    func setData(_ data: [Game]!){
         mDataSet.removeAll()
         if (data != nil && !data.isEmpty) {
             mDataSet += data

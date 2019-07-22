@@ -90,7 +90,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Title Games" image="baseline_videogame_asset_black_18pt" id="DPL-Sq-vjL"/>
                     <connections>
-                        <outlet property="optionsListTableView" destination="r3C-Py-aRz" id="Fio-6f-6cF"/>
+                        <outlet property="gameGroupsListTableView" destination="r3C-Py-aRz" id="Fio-6f-6cF"/>
                         <outlet property="tabBarItem" destination="DPL-Sq-vjL" id="A9M-iD-eP7"/>
                         <segue destination="vPn-ma-sq1" kind="show" identifier="SegueGamesListVC" id="5o6-OD-wSa"/>
                     </connections>
@@ -103,7 +103,13 @@
         <scene sceneID="Jnv-jp-adO">
             <objects>
                 <tabBarController id="CC7-mA-Qaw" customClass="MenuTabBarController" customModule="Entrenamiento" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="19V-y7-feU"/>
+                    <navigationItem key="navigationItem" id="19V-y7-feU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="fxj-5q-e4Z">
+                            <connections>
+                                <action selector="cleanSavedImagesAction:" destination="CC7-mA-Qaw" id="BVd-ak-5Az"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BGj-wL-mOS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

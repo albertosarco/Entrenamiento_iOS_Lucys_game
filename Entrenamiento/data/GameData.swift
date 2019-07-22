@@ -30,16 +30,6 @@ public class GameData {
         return nil
     }
     
-    public static func getGameStagesListById(_ gameId: Int) -> [GameStage]? {
-        do {
-            let data = try Utils.consumeWebService("getGameStagesListById?gameId=\(gameId)")
-            return try JSONDecoder().decode([GameStage].self, from: data)
-        } catch let error {
-            print(error)
-        }
-        return nil
-    }
-    
     public static func getAllGames() -> [Game]? {
         do {
             let data = try Utils.consumeWebService("getAllGames")
