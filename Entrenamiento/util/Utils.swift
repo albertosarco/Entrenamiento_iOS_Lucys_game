@@ -163,5 +163,32 @@ public class Utils {
                                             withIntermediateDirectories: true, attributes: nil)
         }
     }
+    
+    public static func consumeWebService(_ urlString: String) throws -> Data {
+        let connectionTimeOutInSeconds: Double = 60
+        
+        var request = URLRequest(url: URL(string: Utils.getString(R.string.server_url, urlString))!)
+        request.timeoutInterval = connectionTimeOutInSeconds
+        request.cachePolicy = URLRequest.CachePolicy.reloadIgnoringLocalAndRemoteCacheData
+        request.httpMethod = "POST"
+        request.setValue("application/json;charset=UTF-8", forHTTPHeaderField: "Content-Type")
+        
+        let sessionConfig = URLSessionConfiguration.default
+        sessionConfig.timeoutIntervalForRequest = connectionTimeOutInSeconds
+        sessionConfig.timeoutIntervalForResource = connectionTimeOutInSeconds
+        let (data, response) = try URLSession(configuration: sessionConfig).synchronousDataTask(with: request)
+        
+        //se verifica el estatus de la respuesta
+        if (response?.statusCode != 200) {
+            if (response?.statusCode == 401) { //HTTP_UNAUTHORIZED
+                throw String(data: data!, encoding: String.Encoding.utf8) ?? ""
+            } else if (response?.statusCode == 404) { //
+                throw "server not found"
+            } else {
+                throw String(data: data!, encoding: String.Encoding.utf8) ?? ""
+            }
+        }
+        return data!
+    }
 }
 

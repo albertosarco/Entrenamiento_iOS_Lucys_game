@@ -6,7 +6,7 @@
 //  Copyright © 2019 Smart Builders C.A. All rights reserved.
 //
 
-struct OptionCard : Equatable {
+struct OptionCard: Codable  {
     
     var name: String!
     var imageName: String!

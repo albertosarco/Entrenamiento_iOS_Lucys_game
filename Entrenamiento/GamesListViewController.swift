@@ -23,7 +23,7 @@ class GamesListViewController: UIViewController {
         self.removeBackButtonText()
         
         DispatchQueue.global(qos: .background).async(execute: {
-            let gamesList = GameData.getGamesByGroupId(self.mGameGroup?.id)
+            let gamesList = GameData.getGamesByGroupId(self.mGameGroup?.id ?? 0)
             
             DispatchQueue.main.sync {
                 if (gamesList != nil && gamesList?.count ?? 0 > 0) {

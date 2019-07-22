@@ -6,7 +6,7 @@
 //  Copyright © 2019 Smart Builders C.A. All rights reserved.
 //
 
-public struct GameStage {
+public struct GameStage: Codable  {
     
     var referenceCard: ReferenceCard!
     var optionCards: [OptionCard]!

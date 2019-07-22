@@ -31,7 +31,9 @@ class VideosListCollectionView: UICollectionView, UICollectionViewDataSource, UI
     
     public func new(_ vc: UIViewController, _ data: [Game]!) {
         self.mParentVC = vc
-        self.mDataSet += data
+        if (data != nil) {
+            self.mDataSet += data
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -43,7 +45,7 @@ class VideosListCollectionView: UICollectionView, UICollectionViewDataSource, UI
             as! VideosListItemCVCell
         
         cell.name.text = mDataSet[indexPath.row].name
-        Utils.loadImageByFileURL(mDataSet[indexPath.row].videoThumbnailUrl, cell.videoThumbImage)
+        Utils.loadImageByFileURL(Utils.getString(R.string.youtube_thumbnail_hq_url, mDataSet[indexPath.row].videoId) , cell.videoThumbImage)
         
         return cell
     }

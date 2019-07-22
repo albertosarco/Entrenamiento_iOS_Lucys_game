@@ -35,17 +35,6 @@
 		8541529922E3531B00C35A5E /* ReferenceCardItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8541529822E3531B00C35A5E /* ReferenceCardItem.xib */; };
 		8541529F22E35E8100C35A5E /* OptionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8541529E22E35E8100C35A5E /* OptionCard.swift */; };
 		854152A322E362F000C35A5E /* OptionCardItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 854152A222E362F000C35A5E /* OptionCardItem.xib */; };
-		854152A522E38FC200C35A5E /* letra_A.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 854152A422E38FC200C35A5E /* letra_A.mp3 */; };
-		854152B022E391AE00C35A5E /* letra_U.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 854152A822E391AD00C35A5E /* letra_U.mp3 */; };
-		854152B122E391AE00C35A5E /* letra_O.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 854152A922E391AD00C35A5E /* letra_O.mp3 */; };
-		854152B222E391AE00C35A5E /* letra_E.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 854152AA22E391AD00C35A5E /* letra_E.mp3 */; };
-		854152B422E391AE00C35A5E /* letra_I.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 854152AC22E391AD00C35A5E /* letra_I.mp3 */; };
-		854152BD22E3993C00C35A5E /* incorrecto_O.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 854152B822E3993B00C35A5E /* incorrecto_O.mp3 */; };
-		854152BE22E3993C00C35A5E /* incorrecto_E.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 854152B922E3993B00C35A5E /* incorrecto_E.mp3 */; };
-		854152BF22E3993C00C35A5E /* incorrecto_I.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 854152BA22E3993B00C35A5E /* incorrecto_I.mp3 */; };
-		854152C022E3993C00C35A5E /* incorrecto_U.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 854152BB22E3993B00C35A5E /* incorrecto_U.mp3 */; };
-		854152C122E3993C00C35A5E /* incorrecto_A.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 854152BC22E3993C00C35A5E /* incorrecto_A.mp3 */; };
-		854152C322E39CD600C35A5E /* winner.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 854152C222E39CD600C35A5E /* winner.mp3 */; };
 		854152C722E3B4C900C35A5E /* DialogCongratsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854152C622E3B4C900C35A5E /* DialogCongratsViewController.swift */; };
 		854152C922E3B53100C35A5E /* DialogCongrats.xib in Resources */ = {isa = PBXBuildFile; fileRef = 854152C822E3B53100C35A5E /* DialogCongrats.xib */; };
 		854152CB22E3BC6000C35A5E /* balloons.gif in Resources */ = {isa = PBXBuildFile; fileRef = 854152CA22E3BC6000C35A5E /* balloons.gif */; };
@@ -88,17 +77,6 @@
 		8541529822E3531B00C35A5E /* ReferenceCardItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReferenceCardItem.xib; sourceTree = "<group>"; };
 		8541529E22E35E8100C35A5E /* OptionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCard.swift; sourceTree = "<group>"; };
 		854152A222E362F000C35A5E /* OptionCardItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionCardItem.xib; sourceTree = "<group>"; };
-		854152A422E38FC200C35A5E /* letra_A.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = letra_A.mp3; sourceTree = "<group>"; };
-		854152A822E391AD00C35A5E /* letra_U.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = letra_U.mp3; sourceTree = "<group>"; };
-		854152A922E391AD00C35A5E /* letra_O.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = letra_O.mp3; sourceTree = "<group>"; };
-		854152AA22E391AD00C35A5E /* letra_E.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = letra_E.mp3; sourceTree = "<group>"; };
-		854152AC22E391AD00C35A5E /* letra_I.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = letra_I.mp3; sourceTree = "<group>"; };
-		854152B822E3993B00C35A5E /* incorrecto_O.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = incorrecto_O.mp3; sourceTree = "<group>"; };
-		854152B922E3993B00C35A5E /* incorrecto_E.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = incorrecto_E.mp3; sourceTree = "<group>"; };
-		854152BA22E3993B00C35A5E /* incorrecto_I.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = incorrecto_I.mp3; sourceTree = "<group>"; };
-		854152BB22E3993B00C35A5E /* incorrecto_U.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = incorrecto_U.mp3; sourceTree = "<group>"; };
-		854152BC22E3993C00C35A5E /* incorrecto_A.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = incorrecto_A.mp3; sourceTree = "<group>"; };
-		854152C222E39CD600C35A5E /* winner.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winner.mp3; sourceTree = "<group>"; };
 		854152C622E3B4C900C35A5E /* DialogCongratsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogCongratsViewController.swift; sourceTree = "<group>"; };
 		854152C822E3B53100C35A5E /* DialogCongrats.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DialogCongrats.xib; sourceTree = "<group>"; };
 		854152CA22E3BC6000C35A5E /* balloons.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = balloons.gif; sourceTree = "<group>"; };
@@ -155,17 +133,6 @@
 				85216AC222E249870018DB5A /* AppDelegate.swift */,
 				85216AC922E2498A0018DB5A /* Assets.xcassets */,
 				85216ACE22E2498A0018DB5A /* Info.plist */,
-				854152BC22E3993C00C35A5E /* incorrecto_A.mp3 */,
-				854152B922E3993B00C35A5E /* incorrecto_E.mp3 */,
-				854152BA22E3993B00C35A5E /* incorrecto_I.mp3 */,
-				854152B822E3993B00C35A5E /* incorrecto_O.mp3 */,
-				854152BB22E3993B00C35A5E /* incorrecto_U.mp3 */,
-				854152A422E38FC200C35A5E /* letra_A.mp3 */,
-				854152AA22E391AD00C35A5E /* letra_E.mp3 */,
-				854152AC22E391AD00C35A5E /* letra_I.mp3 */,
-				854152A922E391AD00C35A5E /* letra_O.mp3 */,
-				854152A822E391AD00C35A5E /* letra_U.mp3 */,
-				854152C222E39CD600C35A5E /* winner.mp3 */,
 				854152CA22E3BC6000C35A5E /* balloons.gif */,
 				85216ADA22E25A640018DB5A /* adapters */,
 				853D9B2B22E48283009135FF /* data */,
@@ -201,8 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				853D9B2922E47F88009135FF /* Game.swift */,
-				853D9B3622E49719009135FF /* GameStage.swift */,
 				85216ADE22E25AFD0018DB5A /* GameGroup.swift */,
+				853D9B3622E49719009135FF /* GameStage.swift */,
 				8541529E22E35E8100C35A5E /* OptionCard.swift */,
 				8541529222E34D2B00C35A5E /* ReferenceCard.swift */,
 			);
@@ -312,27 +279,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8541529922E3531B00C35A5E /* ReferenceCardItem.xib in Resources */,
-				854152B022E391AE00C35A5E /* letra_U.mp3 in Resources */,
 				853D9B3522E48C4D009135FF /* VideosListItem.xib in Resources */,
 				854152CB22E3BC6000C35A5E /* balloons.gif in Resources */,
-				854152C122E3993C00C35A5E /* incorrecto_A.mp3 in Resources */,
-				854152BF22E3993C00C35A5E /* incorrecto_I.mp3 in Resources */,
 				854152C922E3B53100C35A5E /* DialogCongrats.xib in Resources */,
 				8560FE8322E4B4FD00438448 /* GamesListItem.xib in Resources */,
-				854152A522E38FC200C35A5E /* letra_A.mp3 in Resources */,
-				854152B422E391AE00C35A5E /* letra_I.mp3 in Resources */,
-				854152C022E3993C00C35A5E /* incorrecto_U.mp3 in Resources */,
-				854152B222E391AE00C35A5E /* letra_E.mp3 in Resources */,
 				853D9B3922E4A759009135FF /* GameGroupsListItem.xib in Resources */,
 				85216ACD22E2498A0018DB5A /* LaunchScreen.storyboard in Resources */,
 				853D9B3B22E4A98C009135FF /* Localizable.strings in Resources */,
 				8541529722E34FD600C35A5E /* EmptyLayout.xib in Resources */,
 				85216ACA22E2498A0018DB5A /* Assets.xcassets in Resources */,
-				854152B122E391AE00C35A5E /* letra_O.mp3 in Resources */,
-				854152BE22E3993C00C35A5E /* incorrecto_E.mp3 in Resources */,
 				854152A322E362F000C35A5E /* OptionCardItem.xib in Resources */,
-				854152BD22E3993C00C35A5E /* incorrecto_O.mp3 in Resources */,
-				854152C322E39CD600C35A5E /* winner.mp3 in Resources */,
 				85216AC822E249870018DB5A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

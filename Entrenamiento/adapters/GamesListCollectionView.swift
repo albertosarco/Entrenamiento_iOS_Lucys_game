@@ -43,7 +43,7 @@ class GamesListCollectionView: UICollectionView, UICollectionViewDataSource, UIC
             as! GamesListItemCVCell
         
         cell.name.text = mDataSet[indexPath.row].name
-        Utils.loadImageByFileURL(mDataSet[indexPath.row].videoThumbnailUrl, cell.videoThumbImage)
+        Utils.loadImageByFileURL(Utils.getString(R.string.youtube_thumbnail_hq_url, mDataSet[indexPath.row].videoId), cell.videoThumbImage)
         
         return cell
     }

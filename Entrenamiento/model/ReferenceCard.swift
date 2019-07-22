@@ -6,7 +6,7 @@
 //  Copyright © 2019 Smart Builders C.A. All rights reserved.
 //
 
-struct ReferenceCard : Equatable {
+struct ReferenceCard: Codable {
     
     var name: String?
     var imageName: String?
