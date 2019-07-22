@@ -1,24 +1,207 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xe0-Z6-xou">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="QE4-ij-XCv">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController id="Xe0-Z6-xou" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gck-Gq-1Jd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CC7-mA-Qaw" kind="relationship" relationship="rootViewController" id="Dda-8R-lor"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1oO-ba-dJC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1230" y="-565"/>
+        </scene>
+        <!--Vídeos-->
+        <scene sceneID="rfU-eB-iOV">
+            <objects>
+                <viewController title="Vídeos" id="k7m-lt-V9q" customClass="VideosListViewController" customModule="Entrenamiento" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5w5-kY-Wjt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="q86-Og-8tM" customClass="VideosListCollectionView" customModule="Entrenamiento" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="o8u-GG-LKK">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="q86-Og-8tM" firstAttribute="bottom" secondItem="3i3-8N-hDv" secondAttribute="bottom" id="NSt-rz-dJn"/>
+                            <constraint firstItem="q86-Og-8tM" firstAttribute="leading" secondItem="3i3-8N-hDv" secondAttribute="leading" id="ORg-rC-sRK"/>
+                            <constraint firstItem="q86-Og-8tM" firstAttribute="trailing" secondItem="3i3-8N-hDv" secondAttribute="trailing" id="SQE-Hi-tEH"/>
+                            <constraint firstItem="q86-Og-8tM" firstAttribute="top" secondItem="3i3-8N-hDv" secondAttribute="top" id="bqZ-Wu-Yte"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3i3-8N-hDv"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Title Videos" image="baseline_video_library_black_18pt" id="P47-cd-NVS"/>
+                    <connections>
+                        <outlet property="tabBarItem" destination="P47-cd-NVS" id="xug-1H-sZq"/>
+                        <outlet property="videosListCollectionView" destination="q86-Og-8tM" id="RtG-QG-tYo"/>
+                        <outlet property="videosTabBarItem" destination="P47-cd-NVS" id="Dph-rb-b9L"/>
+                        <segue destination="eE7-Rg-JhL" kind="show" identifier="SegueGameVC" id="c5J-nC-GWn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qaI-2s-zBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2981" y="-203"/>
+        </scene>
+        <!--Juegos-->
+        <scene sceneID="b3H-hW-BbF">
+            <objects>
+                <viewController title="Juegos" id="Eio-hr-6yx" customClass="GameGroupsListViewController" customModule="Entrenamiento" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5k5-1A-rp9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r3C-Py-aRz" customClass="GameGroupsListTableView" customModule="Entrenamiento" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="r3C-Py-aRz" firstAttribute="bottom" secondItem="kmV-ro-Izr" secondAttribute="bottom" id="2ym-1F-3Sy"/>
+                            <constraint firstItem="r3C-Py-aRz" firstAttribute="trailing" secondItem="kmV-ro-Izr" secondAttribute="trailing" id="Ov7-3y-fx7"/>
+                            <constraint firstItem="r3C-Py-aRz" firstAttribute="top" secondItem="kmV-ro-Izr" secondAttribute="top" id="Qmz-4M-oIK"/>
+                            <constraint firstItem="r3C-Py-aRz" firstAttribute="leading" secondItem="kmV-ro-Izr" secondAttribute="leading" id="mxl-lP-h9l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kmV-ro-Izr"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Title Games" image="baseline_videogame_asset_black_18pt" id="DPL-Sq-vjL"/>
+                    <connections>
+                        <outlet property="gamesTabBarItem" destination="DPL-Sq-vjL" id="9CW-hD-62s"/>
+                        <outlet property="optionsListTableView" destination="r3C-Py-aRz" id="Fio-6f-6cF"/>
+                        <outlet property="tabBarItem" destination="DPL-Sq-vjL" id="A9M-iD-eP7"/>
+                        <segue destination="vPn-ma-sq1" kind="show" identifier="SegueGamesListVC" id="5o6-OD-wSa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wqb-l3-Oc0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2983" y="-889"/>
+        </scene>
+        <!--Menu Tab Bar Controller-->
+        <scene sceneID="Jnv-jp-adO">
+            <objects>
+                <tabBarController id="CC7-mA-Qaw" customClass="MenuTabBarController" customModule="Entrenamiento" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="19V-y7-feU"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BGj-wL-mOS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Eio-hr-6yx" kind="relationship" relationship="viewControllers" id="DqY-J3-RLY"/>
+                        <segue destination="k7m-lt-V9q" kind="relationship" relationship="viewControllers" id="8BV-hI-Ek0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="whC-GR-QUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1967" y="-564"/>
+        </scene>
+        <!--Games List View Controller-->
+        <scene sceneID="yY9-A8-HUM">
+            <objects>
+                <viewController id="vPn-ma-sq1" customClass="GamesListViewController" customModule="Entrenamiento" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="564-Yy-yDm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-Tj-bgl" customClass="GamesListCollectionView" customModule="Entrenamiento" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="jgx-OS-ezQ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dbZ-Tj-bgl" firstAttribute="top" secondItem="M2e-cl-49q" secondAttribute="top" id="7Yo-fp-FJN"/>
+                            <constraint firstItem="dbZ-Tj-bgl" firstAttribute="trailing" secondItem="M2e-cl-49q" secondAttribute="trailing" id="P0w-O3-ztF"/>
+                            <constraint firstItem="dbZ-Tj-bgl" firstAttribute="bottom" secondItem="M2e-cl-49q" secondAttribute="bottom" id="ol0-jF-cx4"/>
+                            <constraint firstItem="dbZ-Tj-bgl" firstAttribute="leading" secondItem="M2e-cl-49q" secondAttribute="leading" id="qHt-pk-rXi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="M2e-cl-49q"/>
+                    </view>
+                    <connections>
+                        <outlet property="gamesListCollectionView" destination="dbZ-Tj-bgl" id="wff-Xd-Meo"/>
+                        <segue destination="eE7-Rg-JhL" kind="show" identifier="SegueGameVC" id="7Q7-U9-tDY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WmC-Ba-zBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3904" y="-889"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="euo-NK-YON">
+            <objects>
+                <viewController storyboardIdentifier="VocalsCVID" id="eE7-Rg-JhL" customClass="GameViewController" customModule="Entrenamiento" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hqD-ZR-XC4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tGR-hI-j7n" customClass="GameCardsCollectionView" customModule="Entrenamiento" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="SHQ-hN-2HU">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tGR-hI-j7n" firstAttribute="top" secondItem="Nw6-Ox-gb0" secondAttribute="top" id="Dyq-Mq-XNG"/>
+                            <constraint firstItem="tGR-hI-j7n" firstAttribute="bottom" secondItem="Nw6-Ox-gb0" secondAttribute="bottom" id="FvT-4Y-TEs"/>
+                            <constraint firstItem="tGR-hI-j7n" firstAttribute="leading" secondItem="Nw6-Ox-gb0" secondAttribute="leading" id="WTf-aS-yZa"/>
+                            <constraint firstItem="tGR-hI-j7n" firstAttribute="trailing" secondItem="Nw6-Ox-gb0" secondAttribute="trailing" id="XR7-qV-3Ol"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nw6-Ox-gb0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SWY-uI-7QP"/>
+                    <connections>
+                        <outlet property="gameCardsCollectionView" destination="tGR-hI-j7n" id="olb-nf-t2t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nj0-Ga-bbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4834" y="-563"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="baseline_video_library_black_18pt" width="18" height="18"/>
+        <image name="baseline_videogame_asset_black_18pt" width="18" height="18"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="c5J-nC-GWn"/>
+    </inferredMetricsTieBreakers>
 </document>

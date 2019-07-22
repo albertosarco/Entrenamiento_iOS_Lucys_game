@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Lucy&apos;s Games</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -41,5 +43,28 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+    <key>colorAccent</key>
+    <string>ff409c</string>
+    <key>colorAccentMedium</key>
+    <string>f06292</string>
+    <key>colorPrimary</key>
+    <string>E3006E</string>
+    <key>colorPrimaryDark</key>
+    <string>c90162</string>
+    <key>colorPrimaryLight</key>
+    <string>ff79ba</string>
+    <key>colorPrimaryMedium</key>
+    <string>ff409c</string>
+    <key>textColorAccent</key>
+    <string>444444</string>
+    <key>textColorPrimary</key>
+    <string>FFFFFF</string>
+    <key>title_background_color</key>
+    <string>222222</string>
 </dict>
 </plist>

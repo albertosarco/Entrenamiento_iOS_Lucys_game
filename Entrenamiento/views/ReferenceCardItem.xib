@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YNE-1J-KJa" customClass="ReferenceCardItemCollectionViewCell" customModule="Entrenamiento" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="300"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="280" height="300"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nwu-hw-YMp">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="300"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p4G-4d-Pfc">
+                                <rect key="frame" x="15" y="10" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Jpq-bO-ck5"/>
+                                    <constraint firstAttribute="width" constant="250" id="LDU-qQ-4Ia"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QE5-ar-x3k">
+                                <rect key="frame" x="123" y="268" width="34" height="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="p4G-4d-Pfc" firstAttribute="top" secondItem="Nwu-hw-YMp" secondAttribute="top" constant="10" id="J7H-QP-Pp1"/>
+                            <constraint firstItem="QE5-ar-x3k" firstAttribute="centerX" secondItem="Nwu-hw-YMp" secondAttribute="centerX" id="Q8s-ed-szS"/>
+                            <constraint firstAttribute="bottom" secondItem="QE5-ar-x3k" secondAttribute="bottom" constant="10" id="WGd-Gl-S9q"/>
+                            <constraint firstItem="p4G-4d-Pfc" firstAttribute="centerX" secondItem="Nwu-hw-YMp" secondAttribute="centerX" id="aHI-uA-G7e"/>
+                            <constraint firstItem="QE5-ar-x3k" firstAttribute="top" secondItem="p4G-4d-Pfc" secondAttribute="bottom" constant="8" id="uuf-RP-Erp"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Nwu-hw-YMp" firstAttribute="top" secondItem="YNE-1J-KJa" secondAttribute="top" id="53J-tS-vZr"/>
+                <constraint firstAttribute="trailing" secondItem="Nwu-hw-YMp" secondAttribute="trailing" id="AoW-c2-QAg"/>
+                <constraint firstItem="Nwu-hw-YMp" firstAttribute="leading" secondItem="YNE-1J-KJa" secondAttribute="leading" id="Lmw-qC-g8K"/>
+                <constraint firstAttribute="bottom" secondItem="Nwu-hw-YMp" secondAttribute="bottom" id="TBb-bp-Nst"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="OQa-cX-8bw"/>
+            <size key="customSize" width="313" height="320"/>
+            <connections>
+                <outlet property="image" destination="p4G-4d-Pfc" id="BNc-dg-7zx"/>
+                <outlet property="text" destination="QE5-ar-x3k" id="F3F-0H-PJQ"/>
+            </connections>
+            <point key="canvasLocation" x="156.52173913043478" y="95.758928571428569"/>
+        </collectionViewCell>
+    </objects>
+</document>

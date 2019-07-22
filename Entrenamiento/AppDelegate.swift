@@ -16,6 +16,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        /********* BEGIN OF STYLE **********/
+        
+        // change tint color of tool bar items
+        UIBarButtonItem.appearance().tintColor = R.color.textColorPrimary
+        
+        //To change Navigation Bar Background Color
+        UINavigationBar.appearance().barTintColor = R.color.colorPrimary
+        //To change Back button title & icon color
+        UINavigationBar.appearance().tintColor = R.color.textColorPrimary
+        //To change Navigation Bar Title Color
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: R.color.textColorPrimary]
+//        if (Bundle.main.identifier?.elementsEqual("com.smartbuilders.smartsales.ecommerce.ios.beval") ?? false) {
+//            // Status bar black font
+//            UINavigationBar.appearance().barStyle = UIBarStyle.default
+//        } else  {
+            // Status bar white font
+            UINavigationBar.appearance().barStyle = UIBarStyle.black
+//        }
+        // To Get transparent navigationBar
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+        // To remove black hairline under the Navigationbar
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().isTranslucent = false
+        
+        UIToolbar.appearance().barTintColor = R.color.colorPrimaryLight
+        
+        // To remove border and background colour on searchBar
+        UISearchBar.appearance().isTranslucent = false
+        UISearchBar.appearance().backgroundImage = UIImage()
+        // To apply border and background colour on searchBar
+        UISearchBar.appearance().barTintColor = R.color.title_background_color
+        UISearchBar.appearance().layer.borderColor  = R.color.title_background_color.cgColor
+        
+        UITabBar.appearance().tintColor = R.color.colorAccent
+        
+        UITableViewCell.appearance().tintColor = R.color.colorAccent
+        
+        /********* ENDS OF STYLE **********/
+        
         return true
     }
 
